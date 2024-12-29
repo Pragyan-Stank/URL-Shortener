@@ -7,8 +7,7 @@ const path = require('path');
 const app = express();
 const PORT = 8001;
 
-const uri =
-  "mongodb+srv://pragyansrivastavaofficial616:3050F2g7rSrCKT0r@pragyan.in3t6.mongodb.net/URLshortenerAuth?retryWrites=true&w=majority";
+const uri ="your_mongodb_connection_string";
 
 connectMongoDB(uri).then(() => {
   console.log("Connected to MongoDB");
