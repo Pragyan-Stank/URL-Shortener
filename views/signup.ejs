@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <form action="/signup" method="POST" class="form"> <!-- Added class="form" -->
+        <h2>Sign up</h2>
+        <!-- Render message if it exists -->
+        <% if (typeof message !== 'undefined') { %>
+          <p><%= message %></p>
+        <% } %>
+
+        <!-- Input fields for signup with span classes -->
+        <span class="input-span">
+            <label for="name" class="label">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+        </span>
+
+        <span class="input-span">
+            <label for="email" class="label">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+        </span>
+
+        <span class="input-span">
+            <label for="password" class="label">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+        </span>
+
+        <button type="submit" class="submit">Sign up</button> <!-- Added class="submit" -->
+    </form>
+</body>
+</html>
